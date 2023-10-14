@@ -3,6 +3,7 @@
 /**
  * _printf - function that produces output according to a format
  * @format: character string
+ * @...: other variables
  * Return: number of characters printed
  */
 
