@@ -45,6 +45,16 @@ int ptr_dtr(va_list worf)
 	return (len);
 }
 
+/**
+ * prt_pers - this is a function print %
+ * Return: 1
+ */
+
+int prt_pers(void)
+{
+	_putchar(37);
+	return (1);
+}
 
 int _printf(const char *format, ...)
 {
