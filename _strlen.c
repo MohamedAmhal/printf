@@ -23,7 +23,7 @@ int _strlen(char *s)
 int _strlencst(const char *s)
 {
 	if (*s)
-		return (_strlen(s + 1) + 1);
+		return (_strlencst(s + 1) + 1);
 
 	return (0);
 }
