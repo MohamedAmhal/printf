@@ -56,6 +56,13 @@ int prt_pers(void)
 	return (1);
 }
 
+/**
+ * _printf - produces output according to a format
+ * @format: character string
+ * @...: other arguments
+ * Return: number of characters printed 
+ */
+
 int _printf(const char *format, ...)
 {
 
