@@ -124,6 +124,7 @@ int _printf(const char *format, ...)
 	if (!format || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 
+Etqt:
 	while (format[i] != '\0')
 	{
 		j = 0;
@@ -133,6 +134,7 @@ int _printf(const char *format, ...)
 			{
 				len = len + c[j].f(param);
 				i = i + 2;
+				goto Etqt;
 			}
 			j--;
 		}
