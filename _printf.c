@@ -21,13 +21,13 @@ int prt_char(va_list word)
  * Return: the length of a string
  */
 
-int ptr_dtr(va_list worf)
+int prt_dtr(va_list word)
 {
 	char *str;
 	int len;
 	int i;
 
-	str = va_arg(val, char *);
+	str = va_arg(word, char *);
 	
 	if (!str)
 	{
