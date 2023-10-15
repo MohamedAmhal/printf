@@ -21,7 +21,7 @@ int prt_char(va_list word)
  * Return: the length of a string
  */
 
-int prt_dtr(va_list word)
+int prt_str(va_list word)
 {
 	char *str;
 	int len;
@@ -99,6 +99,7 @@ int prt_int(va_list nmb)
 	}
 	_putchar(end + '0');
 	return (i);
+}
 
 /**
  * _printf - produces output according to a format
@@ -109,5 +110,35 @@ int prt_int(va_list nmb)
 
 int _printf(const char *format, ...)
 {
+	choose c[] = {
+		{"%c", prt_char}, {"%s", prt_str}, {"%%", prt_pers}, {"%i", prt_int}
+	};
 
+	va_list param;
+	int len = 0;
+	int i = 0;
+	int j = 0;
+
+	va_start(param, format);
+
+	if (!format || (format[0] == '%' && format[1] == '\0'))
+		return (-1);
+
+	while (format[i] != '\0')
+	{
+		j = 0;
+		while (j < 4)
+		{
+			if (c[j].cle[0] == format[i] && c[j].cle[1] == format[i + 1])
+			{
+				len = len + c[j].f(param);
+				i = i + 2;
+			}
+			j--;
+		}
+	}
+
+
+	va_end(param);
+	return (len);
 }
