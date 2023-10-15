@@ -28,7 +28,7 @@ int prt_dtr(va_list word)
 	int i;
 
 	str = va_arg(word, char *);
-	
+
 	if (!str)
 	{
 		str = "(null)";
