@@ -5,6 +5,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+typedef struct format
+{
+	char *p;
+	int (*f)();
+}choose;
+
 int _putchar(char c);
 int _printf(const char *format, ...);
 int _strlen(char *s);
