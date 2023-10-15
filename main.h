@@ -12,4 +12,5 @@ int _strlencst(const char *s);
 int prt_dtr(va_list word);
 int prt_char(va_list word);
 int prt_pers(void);
+int prt_int(va_list nmb);
 #endif
