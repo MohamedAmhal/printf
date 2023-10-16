@@ -8,11 +8,11 @@
 
 int prt_char(va_list word)
 {
-        char loc;
+	char loc;
 
-        loc = va_arg(word, int);
-        _putchar(loc);
-        return (1);
+	loc = va_arg(word, int);
+	_putchar(loc);
+	return (1);
 }
 
 /**
@@ -23,26 +23,20 @@ int prt_char(va_list word)
 
 int prt_str(va_list word)
 {
-        char *str;
-        int len;
-        int i;
+	char *str;
+	int len;
+	int i;
 
-        str = va_arg(word, char *);
+	str = va_arg(word, char *);
 
-        if (!str)
-        {
-                str = "(null)";
-                len = _strlen(str);
-        }
-        else
-        {
-                len = _strlen(str);
-        }
+	if (!str)
+		str = "(null)";
+	len = _strlen(str);
 
-        for (i = 0; i < len; i++)
-                _putchar(str[i]);
+	for (i = 0; i < len; i++)
+	_putchar(str[i]);
 
-        return (len);
+	return (len);
 }
 
 /**
@@ -52,51 +46,51 @@ int prt_str(va_list word)
 
 int prt_pers(void)
 {
-        _putchar(37);
-        return (1);
+	_putchar(37);
+	return (1);
 }
 /**
- * _prt_int - this is the function print integer
+ * prt_int - this is the function print integer
  * @nmb: the variadic variable
  * Return: the lenght(int)
  */
 
 int prt_int(va_list nmb)
 {
-        int a = va_arg(nmb,int);
-        int number, digit;
-        int end = a % 10;
-        int x = 1;
-        int i = 1;
+	int a = va_arg(nmb, int);
+	int number, digit;
+	int end = a % 10;
+	int x = 1;
+	int i = 1;
 
-        a = a / 10;
-        number = a;
+	a = a / 10;
+	number = a;
 
-        if (end < 0)
-        {
-                _putchar('-');
-                number = -number;
-                a = -a;
-                end = -end;
-                i++;
-        }
-        if (number > 0)
-        {
-                while (number / 10 != 0)
-                {
-                        x = x * 10;
-                        number = number / 10;
-                }
-                number = a;
-                while (x >0)
-                {
-                        digit = number / x;
-                        _putchar(digit + '0');
-                        number = number - (digit * x);
-                        x = x / 10;
-                        i++;
-                }
-        }
-        _putchar(end + '0');
-        return (i);
+	if (end < 0)
+	{
+	_putchar('-');
+		number = -number;
+		a = -a;
+	end = -end;
+	i++;
+	}
+	if (number > 0)
+	{
+	while (number / 10 != 0)
+	{
+		x = x * 10;
+		number = number / 10;
+	}
+	number = a;
+		while (x > 0)
+	{
+		digit = number / x;
+		_putchar(digit + '0');
+		number = number - (digit * x);
+		x = x / 10;
+		i++;
+		}
+	}
+	_putchar(end + '0');
+	return (i);
 }

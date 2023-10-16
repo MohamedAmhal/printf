@@ -17,7 +17,7 @@ int _strlen(char *s)
 /**
  * _strlencst - strlen for constent char pointer
  * @s: pointer char input
- * Return: the lenght of s 
+ * Return: the lenght of s
  */
 
 int _strlencst(const char *s)
@@ -27,4 +27,3 @@ int _strlencst(const char *s)
 
 	return (0);
 }
-

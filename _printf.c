@@ -26,8 +26,8 @@ int _printf(const char *format, ...)
 Etqt:
 	while (format[i] != '\0')
 	{
-		j = 0;
-		while (j < 4)
+		j = 5;
+		while (j > 0)
 		{
 			if (c[j].cle[0] == format[i] && c[j].cle[1] == format[i + 1])
 			{
