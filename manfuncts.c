@@ -101,7 +101,7 @@ int prt_int(va_list nmb)
  * Return: the lenght
  */
 
-int prt_int(va_list nmb)
+int prt_dec(va_list nmb)
 {
         int a = va_arg(nmb, int);
         int number, digit;

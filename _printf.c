@@ -1,6 +1,28 @@
 #include "main.h"
 
 /**
+ * c_specifiers - check the custom conversion specifiers
+ * @arg: arguments
+ * @sp: char specifier
+ * @len: length of the specifier or -1 if error
+ */
+
+void c_specifiers(va_list arg, char sp, int *len)
+{
+	if (sp == '%')
+		(*len) += prt_pers();
+	else if (sp == 'c')
+		(*len) += prt_char(arg);
+	else if (sp == 's')
+		(*len) += prt_str(arg);
+	else if (sp == 'i')
+		(*len) += prt_int(arg);
+	else if (sp == 'd')
+		(*len) += prt_dec(arg);
+}
+
+
+/**
  * _printf - produces output according to a format
  * @format: character string
  * @...: other arguments
@@ -9,36 +31,24 @@
 
 int _printf(const char *format, ...)
 {
-	choose c[] = {
-		{"%c", prt_char}, {"%s", prt_str}, {"%%", prt_pers}, {"%i", prt_int}
-	};
-
 	va_list param;
 	int len = 0;
 	int i = 0;
-	int j = 0;
 
 	va_start(param, format);
 
 	if (!format || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 
-Etqt:
 	while (format[i] != '\0')
 	{
-		j = 5;
-		while (j > 0)
+		if (format[i] == '%')
 		{
-			if (c[j].cle[0] == format[i] && c[j].cle[1] == format[i + 1])
-			{
-				len = len + c[j].f(param);
-				i = i + 2;
-				goto Etqt;
-			}
-			j--;
+			i++;
+			c_specifiers(param, format[i], &len);
 		}
-		_putchar(format[i]);
-		len++;
+		else
+			len += _putchar(format[i]);
 		i++;
 	}
 
