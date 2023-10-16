@@ -8,22 +8,25 @@
 
 int _strlen(char *s)
 {
-	if (*s)
-		return (_strlen(s + 1) + 1);
+	int c;
 
-	return (0);
+	for (c = 0; s[c] != 0; c++);
+
+	return (c);
+
 }
-
 /**
  * _strlencst - strlen for constent char pointer
  * @s: pointer char input
  * Return: the lenght of s
  */
 
-int _strlencst(const char *s)
+int _strlen(char *s)
 {
-	if (*s)
-		return (_strlencst(s + 1) + 1);
+	int c;
 
-	return (0);
+	for (c = 0; s[c] != 0; c++);
+
+	return (c);
+
 }
