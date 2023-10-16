@@ -15,7 +15,7 @@ void c_specifiers(va_list arg, char sp, int *len)
 		(*len)++;
 	}
 	else if (sp == 'c')
-		(*len) += prt_char(arg);
+		(*len) += _putchar(va_arg(arg, int));
 	else if (sp == 's')
 		(*len) += prt_str(arg);
 	else if (sp == 'i')
