@@ -21,6 +21,8 @@ void c_specifiers(va_list arg, char sp, int *len)
 		(*len) += prt_int(arg);
 	else if (sp == 'd')
 		(*len) += prt_dec(arg);
+	else if (sp == 'b')
+		(*len) += prt_binary(arg);
 }
 
 

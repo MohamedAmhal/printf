@@ -16,5 +16,6 @@ int prt_pers(void);
 int prt_int(va_list nmb);
 int prt_dec(va_list nmb);
 void c_specifiers(va_list arg, char sp, int *len);
+int prt_binary(va_list bin);
 
 #endif
