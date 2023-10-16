@@ -50,7 +50,7 @@ int prt_pers(void)
 	return (1);
 }
 /**
- * prt_int - this is the function print integer
+ * prt_int - this is the function print integer nn
  * @nmb: the variadic variable
  * Return: the lenght(int)
  */
