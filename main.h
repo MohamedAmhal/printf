@@ -19,4 +19,6 @@ int prt_str(va_list word);
 int prt_char(va_list word);
 int prt_pers(void);
 int prt_int(va_list nmb);
+int prt_flag(va_list flag);
+
 #endif
