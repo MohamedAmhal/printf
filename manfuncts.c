@@ -32,7 +32,7 @@ int prt_str(va_list words)
 	if (str == NULL)
 	{
 		str = "(null)";
-		len = _strlen(str);
+		len = _strlencst(str);
 		for (i = 0; i < len; i++)
 			_putchar(str[i]);
 		return (len);
@@ -46,6 +46,7 @@ int prt_str(va_list words)
 		return (len);
 	}
 }
+
 
 /**
  * prt_pers - this is a function print %
