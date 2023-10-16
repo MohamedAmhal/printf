@@ -25,6 +25,5 @@ int prt_flag(va_list flag)
 			len = _putchar('0');
 			len += _putchar('x');
 		}
-
 	return (len);
 }
