@@ -11,11 +11,10 @@ void c_specifiers(va_list arg, char sp, int *len)
 {
 	if (sp == '%')
 	{
-		_putchar('%');
-		(*len)++;
+		(*len) += prt_pers();
 	}
 	else if (sp == 'c')
-		(*len) += _putchar(va_arg(arg, int));
+		(*len) += prt_char(arg);
 	else if (sp == 's')
 		(*len) += prt_str(arg);
 	else if (sp == 'i')
