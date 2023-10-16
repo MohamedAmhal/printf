@@ -17,7 +17,7 @@ int prt_char(va_list word)
 
 /**
  * prt_str - print a string '%s'
- * @word: declaration
+ * @words: declaration
  * Return: the length of a string
  */
 
