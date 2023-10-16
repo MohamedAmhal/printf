@@ -34,7 +34,7 @@ int prt_str(va_list word)
 	len = _strlen(str);
 
 	for (i = 0; i < len; i++)
-	_putchar(str[i]);
+		_putchar(str[i]);
 
 	return (len);
 }
