@@ -20,19 +20,19 @@ int prt_hexad(va_list hex)
 		counter++;
 	}
 	counter++;
-	array = malloc(counter * sizeof(int));
+	table = malloc(counter * sizeof(int));
 
 	for (i = 0; i < counter; i++)
 	{
-		array[i] = temp % 16;
+		table[i] = temp % 16;
 		temp /= 16;
 	}
 	for (i = counter - 1; i >= 0; i--)
 	{
-		if (array[i] > 9)
-			array[i] = array[i] + 39;
-		_putchar(array[i] + '0');
+		if (table[i] > 9)
+			table[i] = table[i] + 39;
+		_putchar(table[i] + '0');
 	}
-	free(array);
+	free(table);
 	return (counter);
 }
