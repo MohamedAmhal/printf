@@ -29,7 +29,7 @@ int prt_hexa_poi(unsigned long int num)
 	for (i = counter - 1; i >= 0; i--)
 	{
 		if (table[i] > 9)
-			table[i] = table[i] + 39;
+			table[i] = table[i] + 7;
 	_putchar(table[i] + '0');
 	}
 	free(table);
