@@ -35,8 +35,13 @@ void c_specifiers(va_list arg, char sp, int *len)
 	{
 		void *p = va_arg(arg, void *);
 		if (!p)
-			(*len) += _
-		(*len) += prt_pointor(arg);
+			(*len) += _puts("(nil)");
+		else
+		{
+			(*len) += _puts("0x");
+			(*len) += prt_pointor(arg);
+		}
+	}
 
 }
 
