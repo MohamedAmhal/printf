@@ -33,6 +33,6 @@ int prt_HEXAD(va_list HEX)
 			table[i] = table[i] + 7;
 		_putchar(table[i] + '0');
 	}
-	free(table);
+free(table);
 	return (counter);
 }
