@@ -23,6 +23,12 @@ void c_specifiers(va_list arg, char sp, int *len)
 		(*len) += prt_dec(arg);
 	else if (sp == 'b')
 		(*len) += prt_binary(arg);
+	else if (sp == 'u')
+		(*len) += prt_unsigned_int(arg);
+	else if (sp == '0')
+		(*len) += prt_octal(arg);
+	else if (sp == 'x' || sp == 'X')
+		(*len) += prt_hexad(arg);
 }
 
 
