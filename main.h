@@ -24,5 +24,6 @@ int prt_HEXAD(va_list HEX);
 int prt_pointor(va_list arg);
 int prt_hexa_poi(unsigned long int num);
 int flags(const char *a, int *len);
+int _puts(char *s);
 
 #endif
