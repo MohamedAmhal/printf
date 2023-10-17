@@ -21,5 +21,7 @@ int prt_unsigned_int(va_list nmb);
 int prt_octal(va_list oc);
 int prt_hexad(va_list hex);
 int prt_HEXAD(va_list HEX);
+int prt_pointor(va_list arg);
+int prt_hexa_poi(unsigned long int num);
 
 #endif

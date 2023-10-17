@@ -47,10 +47,9 @@ int _printf(const char *format, ...)
 	int len = 0;
 	int i = 0;
 
-	va_start(param, format);
-
 	if (!format || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
+	va_start(param, format);
 
 	while (format[i] != '\0')
 	{
@@ -58,6 +57,7 @@ int _printf(const char *format, ...)
 		{
 			i++;
 			c_specifiers(param, format[i], &len);
+
 		}
 		else
 			len += _putchar(format[i]);
