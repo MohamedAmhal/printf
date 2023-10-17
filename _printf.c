@@ -33,7 +33,9 @@ void c_specifiers(va_list arg, char sp, int *len)
 		(*len) += prt_HEXAD(arg);
 	else if (sp == 'p')
 		(*len) += prt_pointor(arg);
+
 }
+
 /**
  * flags - checking the flags
  * @a: the specification

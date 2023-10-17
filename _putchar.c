@@ -6,6 +6,7 @@
 * @x: the variable
 * Description: Provided Description
 * Return: 0 (Success)
+* Or error, -1
 */
 int _putchar(char x)
 {
