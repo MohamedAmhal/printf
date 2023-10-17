@@ -11,7 +11,7 @@ int prt_pointor(va_list arg)
 	char *s = "(nil)";
 	void *p;
 	int i;
-	long int a;
+	unsigned long int a;
 	int b;
 
 	p = va_arg(arg, void *);
@@ -24,7 +24,7 @@ int prt_pointor(va_list arg)
 		return (i);
 	}
 
-	a = (unsigned long int)p;
+	a = (unsigned long int)*p;
 	_putchar('0');
 	_putchar('X');
 	b = prt_hexa_poi(a);
