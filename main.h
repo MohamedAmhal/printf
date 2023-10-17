@@ -20,5 +20,6 @@ int prt_binary(va_list bin);
 int prt_unsigned_int(va_list nmb);
 int prt_octal(va_list oc);
 int prt_hexad(va_list hex);
+int prt_HEXAD(va_list HEX);
 
 #endif

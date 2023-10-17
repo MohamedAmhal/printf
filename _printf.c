@@ -27,8 +27,10 @@ void c_specifiers(va_list arg, char sp, int *len)
 		(*len) += prt_unsigned_int(arg);
 	else if (sp == '0')
 		(*len) += prt_octal(arg);
-	else if (sp == 'x' || sp == 'X')
+	else if (sp == 'x')
 		(*len) += prt_hexad(arg);
+	else if (sp == 'X')
+		(*len) += prt_HEXAD(arg);
 }
 
 
