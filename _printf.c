@@ -44,9 +44,6 @@ void c_specifiers(va_list arg, char sp, int *len)
 			prt_hexa_poi((unsigned long)p, len);
 		}
 	}
-	else
-		no_c_specifiers(arg, sp, &*len);
-
 }
 
 /**
