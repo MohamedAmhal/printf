@@ -22,7 +22,7 @@ int prt_octal(va_list oc);
 int prt_hexad(va_list hex);
 int prt_HEXAD(va_list HEX);
 int prt_pointor(va_list arg);
-int prt_hexa_poi(unsigned long int num);
+void prt_hexa_poi(unsigned long n, int *len);
 int flags(const char *a, int *len);
 int _puts(char *s);
 

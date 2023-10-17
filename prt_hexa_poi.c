@@ -16,6 +16,6 @@ void prt_hexa_poi(unsigned long n, int *len)
 	if (n > 15)
 		prt_hexa_poi(n / 16, len);
 
-	_putchar(hex[num % 16]);
+	_putchar(hex[n % 16]);
 	(*len)++;
 }
