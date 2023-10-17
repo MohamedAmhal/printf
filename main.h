@@ -25,5 +25,6 @@ int prt_pointor(va_list arg);
 void prt_hexa_poi(unsigned long n, int *len);
 int flags(const char *a, int *len);
 int _puts(char *s);
+void no_c_specifiers(va_list arg, char sp, int *len);
 
 #endif

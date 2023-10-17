@@ -44,34 +44,54 @@ void c_specifiers(va_list arg, char sp, int *len)
 			prt_hexa_poi((unsigned long)p, len);
 		}
 	}
+	else
+		no_c_specifiers(arg, sp, &*len);
 
+}
+
+/**
+ * no_c_specifiers - checks a non custom specifiers
+ * @arg:arguments
+ * @sp: char specifier
+ * @len: lenght
+ */
+
+void no_c_specifiers(va_list arg, char sp, int *len)
+{
+	if (sp == 'b')
+		(*len) += prt_binary(arg);
+	else
+	{
+		(*len) += _putchar('%');
+		(*len) += _putchar(sp);
+	}
 }
 
 /**
  * flags - checking the flags
  * @a: the specification
  * @len: the lenght of the string
- * Return: the length sometimes 0
+ * Return: the length sometimes, 0 otherwise
  */
 
 int flags(const char *a, int *len)
 {
 	if (*a == '+')
 	{
-		*len += _putchar('+');
+		(*len) += _putchar('+');
 		return (1);
 	}
 	else if (*a == '#')
 	{
 		if (*(a + 1) == 'o')
-			*len = _putchar('0');
+			(*len) = _putchar('0');
 		if (*(a + 1) == 'x' || *(a + 1) == 'X')
-			*len = _printf("0x");
+			(*len) = _printf("0x");
 		return (1);
 	}
 	else if (*a == ' ')
 	{
-		*len += _putchar(' ');
+		(*len) += _putchar(' ');
 		return (1);
 	}
 	return (0);
