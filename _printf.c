@@ -87,7 +87,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			if(flags(&format[i], &len))
+			if (flags(&format[i], &len))
 				i++;
 			c_specifiers(param, format[i], &len);
 

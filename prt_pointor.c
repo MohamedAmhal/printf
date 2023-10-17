@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * prt_pointor : function that print the adress memory
+ * prt_pointor - function that print the adress memory
  * @arg: argument
  * Return: 1;
  */
@@ -14,10 +14,10 @@ int prt_pointor(va_list arg)
 	long int a;
 	long int b;
 
-	p = va_arg(arg,void *);
+	p = va_arg(arg, void *);
 	if (p == NULL)
 	{
-		for(i = 0; s[i]; i++)
+		for (i = 0; s[i]; i++)
 		{
 			_putchar(s[i]);
 		}

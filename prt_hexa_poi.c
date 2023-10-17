@@ -2,7 +2,7 @@
 
 /**
  * prt_hexa_poi - this is the function converte a int to hexadecimal
- * @arg: the variable
+ * @num: the variable
  * Return: the lenght
  */
 
