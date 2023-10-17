@@ -60,7 +60,7 @@ int _printf(const char *format, ...)
 			c_specifiers(param, format[i], &len);
 		}
 		else
-			len += _putchar(format[i]);
+			len += putchar(format[i]);
 		i++;
 	}
 
