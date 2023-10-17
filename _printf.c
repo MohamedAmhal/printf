@@ -34,6 +34,35 @@ void c_specifiers(va_list arg, char sp, int *len)
 	else if (sp == 'p')
 		(*len) += prt_pointor(arg);
 }
+/**
+ * flags - checking the flags
+ * @a: the specification
+ * @len: the lenght of the string
+ * Return: the length sometimes 0
+ */
+
+int flags(const char *a, int *len)
+{
+	if (*a == '+')
+	{
+		*len += _putchar('+');
+		return (1);
+	}
+	else if (*a == '#')
+	{
+		if (*(a + 1) == 'o')
+			*len = _putchar('0');
+		if (*(a + 1) == 'x' || *(a + 1) == 'X')
+			*len = _printf("0x");
+		return (1);
+	}
+	else if (*a == ' ')
+	{
+		*len += _putchar(' ');
+		return (1);
+	}
+	return (0);
+}
 
 
 /**
@@ -58,6 +87,8 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
+			if(flags(&format[i], &len))
+				i++;
 			c_specifiers(param, format[i], &len);
 
 		}
