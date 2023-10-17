@@ -32,7 +32,18 @@ void c_specifiers(va_list arg, char sp, int *len)
 	else if (sp == 'X')
 		(*len) += prt_HEXAD(arg);
 	else if (sp == 'p')
-		(*len) += prt_pointor(arg);
+	{
+		void *p = va_arg(arg, void *);
+
+		if (!p)
+			(*len) += _puts("(nil)");
+		else
+		{
+
+			(*len) += _puts("0x");
+			(*len) += prt_hexa_poi(va_arg(arg, unsigned long int));
+		}
+	}
 
 }
 
