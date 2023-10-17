@@ -12,7 +12,7 @@ int prt_pointor(va_list arg)
 	void *p;
 	int i;
 	long int a;
-	long int b;
+	int b;
 
 	p = va_arg(arg, void *);
 	if (p == NULL)
