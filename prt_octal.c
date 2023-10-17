@@ -12,7 +12,7 @@ int prt_octal(va_list oc)
 	unsigned int retu = number;
 	int i;
 	int *table;
-	int compteur;
+	int compteur = 0;
 
 	while (number / 8 != 0)
 	{
@@ -22,6 +22,8 @@ int prt_octal(va_list oc)
 	compteur++;
 
 	table = malloc(sizeof(int) * compteur);
+	if (!table)
+		return (-1);
 
 	for (i = 0; i < compteur; i++)
 	{
