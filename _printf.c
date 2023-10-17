@@ -1,4 +1,4 @@
-#include "main.h"   hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+#include "main.h"
 
 /**
  * c_specifiers - check the custom conversion specifiers
@@ -57,8 +57,8 @@ void c_specifiers(va_list arg, char sp, int *len)
 
 void no_c_specifiers(va_list arg, char sp, int *len)
 {
-	if (sp == 'b')
-		(*len) += prt_binary(arg);
+	if (sp == 'r')
+		(*len) += reverse_str(va_arg(arg, char*));
 	else
 	{
 		(*len) += _putchar('%');
