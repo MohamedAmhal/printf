@@ -46,7 +46,6 @@ void c_specifiers(va_list arg, char sp, int *len)
 	}
 	else
 		no_c_specifiers(arg, sp, &*len);
-
 }
 
 /**
