@@ -11,7 +11,7 @@ int prt_char(va_list word)
 	char loc;
 
 	loc = va_arg(word, int);
-	putchar(loc);
+	_putchar(loc);
 	return (1);
 }
 
@@ -34,14 +34,14 @@ int prt_str(va_list words)
 		str = "(null)";
 		len = _strlen(str);
 		for (i = 0; i < len; i++)
-			putchar(str[i]);
+			_putchar(str[i]);
 		return (len);
 	}
 	else
 	{
 		len = _strlen(str);
 		for (i = 0; i < len; i++)
-			putchar(str[i]);
+			_putchar(str[i]);
 
 		return (len);
 	}
@@ -55,7 +55,7 @@ int prt_str(va_list words)
 
 int prt_pers(void)
 {
-	putchar(37);
+	_putchar(37);
 	return (1);
 }
 /**
@@ -94,13 +94,13 @@ int prt_int(va_list nmb)
 		while (x > 0)
 	{
 		digit = number / x;
-		putchar(digit + '0');
+		_putchar(digit + '0');
 		number = number - (digit * x);
 		x = x / 10;
 		i++;
 		}
 	}
-	putchar(end + '0');
+	_putchar(end + '0');
 	return (i);
 }
 
@@ -123,7 +123,7 @@ int prt_dec(va_list nmb)
 
 	if (end < 0)
 	{
-		putchar('-');
+		_putchar('-');
 		number = -number;
 		a = -a;
 		end = -end;
@@ -141,12 +141,12 @@ int prt_dec(va_list nmb)
 		while (x > 0)
 		{
 			digit = number / x;
-			putchar(digit + '0');
+			_putchar(digit + '0');
 			number = number - (digit * x);
 			x = x / 10;
 			i++;
 		}
 	}
-	putchar(end + '0');
+	_putchar(end + '0');
 	return (i);
 }
