@@ -60,6 +60,8 @@ void no_c_specifiers(va_list arg, char sp, int *len)
 {
 	if (sp == 'b')
 		(*len) += prt_binary(arg);
+	else if (sp == 'S')
+		*len += prt_string(va_arg(arg, char *));
 	else
 	{
 		(*len) += _putchar('%');
