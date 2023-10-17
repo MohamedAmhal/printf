@@ -1,5 +1,5 @@
 #include <unistd.h>
-#include	"main.h"
+#include "main.h"
 /* .C Main For ALX Students Provided with Betty style */
 /**
 * _putchar - Entry point
