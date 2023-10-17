@@ -28,5 +28,6 @@ int _puts(char *s);
 int upper_hex(int num, int *len);
 int prt_string(char *s);
 void no_c_specifiers(va_list arg, char sp, int *len);
+void no_c_specifiers(va_list arg, char sp, int *len);
 
 #endif
