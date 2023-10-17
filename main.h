@@ -26,10 +26,7 @@ void prt_hexa_poi(unsigned long n, int *len);
 int flags(const char *a, int *len);
 int _puts(char *s);
 int upper_hex(int num, int *len);
-<<<<<<< HEAD
 int prt_string(char *s);
-=======
 void no_c_specifiers(va_list arg, char sp, int *len);
->>>>>>> da4a3ba9cc6c6358ad583a8d9b8e7b1d8f8ee0f9
 
 #endif
