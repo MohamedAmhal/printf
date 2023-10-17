@@ -41,7 +41,7 @@ void c_specifiers(va_list arg, char sp, int *len)
 		{
 
 			(*len) += _puts("0x");
-			(*len) += prt_hexa_poi(va_arg(arg, unsigned long int));
+			prt_hexa_poi((unsigned long)p, len);
 		}
 	}
 
