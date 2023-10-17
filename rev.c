@@ -3,13 +3,14 @@
 /**
  * reverse_str - reverse a string
  * @s: string input
+ * Return: length of the string
  */
 
-void reverse_str(char *s)
+int reverse_str(char *s)
 {
 	int i = 0;
 	int len = 0;
-	int c = 0;
+	int retrn;
 
 	while (s[i] != '\0')
 	{
@@ -17,14 +18,13 @@ void reverse_str(char *s)
 		i++;
 	}
 
-	i = 0;
-	len--;
+	retrn = len;
 
-	while (i <= (len / 2))
+	while (len >= 1)
 	{
-		c = s[i];
-		s[i] = s[len - i];
-		s[len - i] = c;
-		i++;
+		_putchar(s[len - 1]);
+		len -= 1;
 	}
+
+	return (retrn);
 }
