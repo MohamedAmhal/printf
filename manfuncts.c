@@ -29,7 +29,7 @@ int prt_str(va_list words)
 
 	str = va_arg(words, char *);
 
-	if (str)
+	if (!str)
 	{
 		str = "(null)";
 		len = _strlen(str);
