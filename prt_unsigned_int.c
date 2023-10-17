@@ -9,7 +9,7 @@
 int prt_unsigned_int(va_list nmb)
 {
 	unsigned int a = va_arg(nmb, unsigned int);
-	int number, digit
+	int number, digit;
 	int end = a % 10;
 	int x = 1;
 	int i = 1;

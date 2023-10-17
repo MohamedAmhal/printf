@@ -16,7 +16,7 @@ int prt_octal(va_list oc)
 
 	while (number / 8 != 0)
 	{
-		num /= 8;
+		number /= 8;
 		compteur++;
 	}
 	compteur++;
