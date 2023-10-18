@@ -70,7 +70,7 @@ void no_c_specifiers(va_list arg, char sp, int *len)
  * flags - checking the flags
  * @a: the specification
  * @len: the lenght of the string
- * Return: the length sometimes, 0 otherwise
+ * Return: 1 if checked, 0 otherwise
  */
 
 int flags(const char *a, int *len)
