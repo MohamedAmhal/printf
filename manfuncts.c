@@ -77,11 +77,11 @@ int prt_int(va_list nmb)
 
 	if (end < 0)
 	{
-	putchar('-');
+		_putchar('-');
 		number = -number;
 		a = -a;
-	end = -end;
-	i++;
+		end = -end;
+		i++;
 	}
 	if (number > 0)
 	{
