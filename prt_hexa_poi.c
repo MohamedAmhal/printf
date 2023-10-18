@@ -10,7 +10,7 @@ void prt_hexa_poi(unsigned long n, int *len)
 {
 	char *hex;
 
-	hex = "0123456789ABCDEF";
+	hex = "0123456789abcdef";
 
 	if (!hex)
 		exit(-1);
