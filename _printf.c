@@ -31,6 +31,8 @@ void c_specifiers(va_list arg, char sp, int *len)
 		(*len) += prt_hexad(arg);
 	else if (sp == 'X')
 		(*len) += prt_HEXAD(arg);
+	else if (sp == 'S')
+		(*len) +=  prt_string_z(arg); 
 	else if (sp == 'p')
 	{
 		void *p = va_arg(arg, void *);
